@@ -1,0 +1,26 @@
+# LorePages Configuration
+
+# Configuration for multi-page lore navigation
+lore-navigation:
+  # Whether to automatically append a navigation footer to multi-page items
+  enable-footer: true
+
+  # Whether to align the navigation footer to the middle of the tooltip
+  align-footer-middle: true
+
+  # The dot style configuration
+  active-dot: "&a●"     # Active page dot format
+  inactive-dot: "&7○"   # Inactive page dot format
+
+  # The format of the footer (supports color codes).
+  # Placeholders: 
+  #   {dots} = dot indicator (e.g. ● ○ ○)
+  #   {current} = active page index
+  #   {total} = total pages count
+  footer-format: "&8[ {dots} &8]"
+
+  # Sound played when player turns a page
+  enable-sound: true
+  sound: "UI_BUTTON_CLICK" # Spigot Sound enum name (e.g. ITEM_ARMOR_EQUIP_LEATHER, UI_BUTTON_CLICK)
+  sound-volume: 1.0
+  sound-pitch: 1.5

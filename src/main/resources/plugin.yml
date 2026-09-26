@@ -1,0 +1,13 @@
+name: LorePages
+version: '${version}'
+main: me.d4t.lorepages.LorePages
+api-version: '1.21.8'
+load: POSTWORLD
+folia-supported: true
+
+commands:
+  lorepages:
+    description: LorePages main command
+    aliases: [lp, lorepage]
+    permission: lorepages.admin
+    permission-message: &cYou do not have permission to execute this command.
