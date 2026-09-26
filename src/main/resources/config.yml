@@ -8,6 +8,11 @@ lore-navigation:
   # Whether to align the navigation footer to the middle of the tooltip
   align-footer-middle: true
 
+  # When enabled, pages without any visible text are skipped during page
+  # splitting and navigation. Useful to ignore pages created by consecutive
+  # or trailing "---page---" separators.
+  skip-empty-page: true
+
   # The dot style configuration
   active-dot: "&a●"     # Active page dot format
   inactive-dot: "&7○"   # Inactive page dot format

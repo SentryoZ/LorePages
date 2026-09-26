@@ -6,7 +6,7 @@
 
     <groupId>me.d4t</groupId>
     <artifactId>lorepages</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>jar</packaging>
 
     <name>LorePages</name>

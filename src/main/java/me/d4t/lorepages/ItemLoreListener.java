@@ -311,6 +311,25 @@ public class ItemLoreListener implements Listener {
         }
         pages.add(currentPage);
 
+        if (plugin.getConfig().getBoolean("lore-navigation.skip-empty-page", true)) {
+            List<List<Component>> nonEmptyPages = new ArrayList<>();
+            for (List<Component> page : pages) {
+                boolean hasContent = false;
+                for (Component comp : page) {
+                    if (!PlainTextComponentSerializer.plainText().serialize(comp).trim().isEmpty()) {
+                        hasContent = true;
+                        break;
+                    }
+                }
+                if (hasContent) {
+                    nonEmptyPages.add(page);
+                }
+            }
+            if (!nonEmptyPages.isEmpty()) {
+                pages = nonEmptyPages;
+            }
+        }
+
         List<List<String>> serializedPages = new ArrayList<>();
         for (List<Component> page : pages) {
             List<String> serializedPage = new ArrayList<>();
